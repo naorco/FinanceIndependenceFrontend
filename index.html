@@ -24,7 +24,15 @@
       justify-content: center; /* space-between; */
       align-items: center;
     }
-
+    .Title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 12px;
+      background: linear-gradient(90deg, #e8f6ff, #fafdff);
+      border-bottom: 2px solid #d6eaff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
     .brand {
       font-size: 22px;
       font-weight: bold;
@@ -238,6 +246,11 @@
         font-size: 0.95rem;
         margin-top: 4px;
       }
+      .logo {
+        height: 120px;
+        width: auto;
+        border-radius: 15px;
+      }
       .analytics-counters {
         display: flex;
         justify-content: center;
@@ -298,16 +311,8 @@
 
 <body>
 
-<header style="
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 15px 12px;
-  background: linear-gradient(90deg, #e8f6ff, #fafdff);
-  border-bottom: 2px solid #d6eaff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-">
-  <img 
+<header class=Title>
+  <img
     src="logo.jpg" 
     alt="Financial Freedom Logo"
     class ="logo"
