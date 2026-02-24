@@ -16,7 +16,7 @@
     }
 
     header {
-      background: rgba(255,255,255,0.65);
+      background:rgba(255,255,255,0.65);
       backdrop-filter: blur(10px);
       padding: 20px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.07);
@@ -24,13 +24,22 @@
       justify-content: center; /* space-between; */
       align-items: center;
     }
+    .header-container {
+      display: flex;
+      justify-content: center; /* space-between; */
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+    }
     .Title {
       display: flex;
       flex-direction: column;
+      /* flex-wrap: wrap; */
+      justify-content: center;
       align-items: center;
       gap: 15px;
       padding: 15px 12px;
-      background: linear-gradient(90deg, #e8f6ff, #fafdff);
+      background:linear-gradient(90deg, #e8f6ff, #fafdff);
       border-bottom: 2px solid #d6eaff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
@@ -49,6 +58,12 @@
       line-height: 1.2;
       
     }
+    .tagline {
+        font-size: 0.9rem;
+        color: #507a9b;
+        justify-content: center;
+        text-align: center;
+      }
     /* style="
       margin: 0;
       font-size: 2.5rem;
@@ -237,14 +252,19 @@
     /* ---------------- MOBILE OPTIMIZATION ---------------- */
     @media (max-width: 600px) {
       .brand { 
-        font-size: 50px;
+        font-size: 1.9rem;
         line-height: 2.1rem; 
       }
       .Title {
         padding: 10px 12px;
         gap: 10px;
       } 
-
+      .tagline {
+        font-size: 0.9rem;
+        color: #507a9b;
+        justify-content: center;
+        text-align: center;
+      }
       .card {
         padding: 16px;
         font-size: 0.95rem;
@@ -335,36 +355,65 @@
 
 <body>
 
-<header>
-  <img
+<!-- <header>
+  
+  <div class="Title">
+    <img
     src="logo.jpg" 
     alt="Financial Freedom Logo"
-    class =logo
-  >
-  <div class="Title">
+    class =logo>
     <h1 class="brand">
       Financial Independence Simulator
     </h1>
-    
-    <span style="
+      <span style="
       font-size: 0.9rem;
       color: #507a9b;
       justify-content: center;
-      text-align: center;
-    ">
+      text-align: center;">
       Plan your future. Live your dream.
     </span>
+    
     <div class="analytics-counters">
       <p>👁 Total Visits: <span id="visitCount">0</span></p>
       <p>⚙  Simulation Runs: <span id="simRunCount">0</span></p>
   </div>
-  </div>
   <img 
     src="logo.jpg" 
     alt="Financial Freedom Logo"
-    class =logo
-    
-  >
+    class =logo>
+  </div>
+</header> -->
+<header>
+  <div class="header-container">
+
+    <!-- LEFT IMAGE -->
+    <img 
+      src="logo.jpg" 
+      alt="Financial Freedom Logo"
+      class="logo"
+    >
+
+    <!-- CENTER TITLE BLOCK -->
+    <div class="Title">
+      <h1 class="brand">Financial Independence Simulator</h1>
+
+      <span class="tagline">
+        Plan your future. Live your dream.
+      </span>
+
+      <div class="analytics-counters">
+        <p>👁 Total Visits: <span id="visitCount">0</span></p>
+        <p>⚙ Simulation Runs: <span id="simRunCount">0</span></p>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <img 
+      src="logo.jpg" 
+      alt="Financial Freedom Logo"
+      class="logo"
+    >
+  </div>
 </header>
 
 <div class="container">
