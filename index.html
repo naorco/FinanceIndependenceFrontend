@@ -26,6 +26,7 @@
     }
     .Title {
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 15px;
       padding: 15px 12px;
@@ -33,13 +34,28 @@
       border-bottom: 2px solid #d6eaff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+    /* style="display: flex; flex-direction: column;" */
     .brand {
-      font-size: 22px;
-      font-weight: bold;
+      /* font-size: 22px; */
+      /* font-weight: bold; */
+      display: flex;
+      flex-direction: row;
       justify-content: center;
-      color: #2e3c88;
+      /* color: #2e3c88; */
+      margin: 0;
+      font-size: 2.0rem;
+      font-weight: 700;
+      color: #234b6f;
+      line-height: 1.2;
+      
     }
-
+    /* style="
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #234b6f;
+      line-height: 1.2;
+    " */
     .support-buttons a {
       margin-left: 10px;
       text-decoration: none;
@@ -221,6 +237,10 @@
     /* ---------------- MOBILE OPTIMIZATION ---------------- */
     @media (max-width: 600px) {
       .brand { font-size: 22px; }
+      .Title {
+        padding: 12px 8px;
+        gap: 10px;
+      } 
 
       .card {
         padding: 16px;
@@ -312,20 +332,14 @@
 
 <body>
 
-<header class=Title>
+<header>
   <img
     src="logo.jpg" 
     alt="Financial Freedom Logo"
     class =logo
   >
-  <div style="display: flex; flex-direction: column;">
-    <h1 style="
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #234b6f;
-      line-height: 1.2;
-    ">
+  <div class="Title">
+    <h1 class="brand">
       Financial Independence Simulator
     </h1>
     
