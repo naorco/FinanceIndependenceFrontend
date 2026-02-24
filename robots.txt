@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://naorco.github.io/FinanceIndependenceFrontend/sitemap.xml
