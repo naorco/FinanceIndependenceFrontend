@@ -786,6 +786,11 @@ async function loadVisitorsAnalytics() {
 }
 </script>
 <script>
+// limits number of simulation runs to 100 to prevent browser overload, can be adjusted in the input field attributes and in the backend as well
+document.getElementById("sim_runs").addEventListener("input", function () {
+    if (this.value > 100) this.value = 100;
+    if (this.value < 1) this.value = 1;
+});
 // restore parameters on page load
 window.addEventListener("DOMContentLoaded", () => {
     const inputs = document.querySelectorAll(".sim_input");
