@@ -36,6 +36,8 @@
     .Title {
       display: flex;
       flex-direction: column;
+      flex: 1;
+      width: auto;
       /* flex-wrap: wrap; */
       justify-content: center;
       align-items: center;
@@ -65,6 +67,7 @@
         color: #507a9b;
         justify-content: center;
         text-align: center;
+        margin-top: 10px;
       }
     /* style="
       margin: 0;
@@ -100,6 +103,7 @@
       color: #555;
       justify-content: center;
       text-align: center;
+      margin-top: 8px;
     }
     .support-btn:hover {
       transform: translateY(-2px);
@@ -254,20 +258,31 @@
     /* ---------------- MOBILE OPTIMIZATION ---------------- */
     @media (max-width: 760px) {
       .brand { 
-        font-size: 0.9rem;
-        line-height: 1.9rem;
-        width: auto;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        width: 100%;
+        white-space: normal;
+        word-wrap: break-word;
+        text-align: center;
+        margin: 0;
+        
       }
       .Title {
-        padding: 10px 10px;
+        padding: 10px;
         gap: 10px;
         width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
       } 
       .tagline {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         color: #507a9b;
         justify-content: center;
         text-align: center;
+        margin-top: 8px;
+        width: 100%;
       }
       .card {
         padding: 16px;
@@ -285,14 +300,6 @@
       header {
         padding: 10px 12px;
       }
-      /* header h1 {
-        font-size: 0.5rem;
-        line-height: 2.1rem;
-      }
-      header p {
-        font-size: 0.95rem;
-        margin-top: 4px;
-      } */
       .logo {
         display: flex;
         height: 100px;
@@ -304,8 +311,9 @@
         justify-content: center;
         text-align: center;
         gap: 1px;
-        margin-top: 3px;
-        font-size: 0.5rem !important;
+        margin-top: 6px;
+        font-size: 0.7rem !important;
+        width: 100%;
     }
     
 
@@ -360,34 +368,7 @@
 
 <body>
 
-<!-- <header>
-  
-  <div class="Title">
-    <img
-    src="logo.jpg" 
-    alt="Financial Freedom Logo"
-    class =logo>
-    <h1 class="brand">
-      Financial Independence Simulator
-    </h1>
-      <span style="
-      font-size: 0.9rem;
-      color: #507a9b;
-      justify-content: center;
-      text-align: center;">
-      Plan your future. Live your dream.
-    </span>
-    
-    <div class="analytics-counters">
-      <p>👁 Total Visits: <span id="visitCount">0</span></p>
-      <p>⚙  Simulation Runs: <span id="simRunCount">0</span></p>
-  </div>
-  <img 
-    src="logo.jpg" 
-    alt="Financial Freedom Logo"
-    class =logo>
-  </div>
-</header> -->
+
 <header>
   <div class="header-container">
 
