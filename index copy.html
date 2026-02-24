@@ -156,29 +156,15 @@
 
     button {
       padding: 12px 20px;
-      background: #0a0a0a;
+      background: #4a73ff;
       color: white;
       border: none;
       border-radius: 8px;
       font-size: 15px;
-      font-style: bold;
       cursor: pointer;
       margin-top: 10px;
-      /* display: flex; */
-      /* flex-wrap: wrap; */
-      /* flex-direction: column; */
       justify-content: center;
-      text-align: center;
-      width: auto;
-      gap: 20px;
     }
-    .button-row {
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-        margin: 18px 0;
-    }
-    /*style="display: flex; justify-content: center; width: 100%; gap: 20px;"*/
     button:hover { background: #2f59f7; }
 
     .plot-card {
@@ -215,12 +201,7 @@
       .brand { font-size: 22px; }
 
       .card {
-        padding: 16px;
-        font-size: 0.95rem;
-        line-height: 1.35rem;
-      }
-      .card p {
-        margin-bottom: 10px;
+        padding: 18px;
       }
 
       button {
@@ -228,24 +209,8 @@
       }
 
       header {
-        padding: 10px 12px;
+        padding: 15px 10px;
       }
-      header h1 {
-        font-size: 1.9rem;
-        line-height: 2.1rem;
-      }
-      header p {
-        font-size: 0.95rem;
-        margin-top: 4px;
-      }
-      .analytics-counters {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 6px;
-        font-size: 0.9rem !important;
-    }
-    
 
       .plot-card {
         padding: 12px;
@@ -253,45 +218,6 @@
         justify-content: center;
         text-align: center;
       }
-
-    /* Button row */
-    .button-row {
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-        margin: 18px 0;
-    }
-
-    .button-row button {
-        padding: 12px 20px;
-        font-size: 1rem;
-        border-radius: 10px;
-    }
-
-    /* Results card */
-    #results-card {
-        margin-top: 12px !important;
-        padding-top: 10px !important;
-    }
-
-    /* Plot cards */
-    .plot-card {
-        padding: 12px !important;
-        margin-bottom: 22px !important;
-    }
-
-    .plot-card h3 {
-        margin-bottom: 10px !important;
-        font-size: 1.3rem !important;
-        text-align: center;
-    }
-
-    /* Shrink Plotly toolbar on mobile */
-    .js-plotly-plot .modebar {
-        transform: scale(0.8);
-        right: 0;
-    }
-
     }
   </style>
 </head>
@@ -343,6 +269,15 @@
     
   >
 </header>
+<!-- <header>
+  <div class="brand">
+    <h1>Financial Simulation Dashboard</h1>
+    <div class="analytics-counters">
+      <p>👁 Total Visits: <span id="visitCount">0</span></p>
+      <p>⚙  Simulation Runs: <span id="simRunCount">0</span></p>
+  </div>
+  </div>
+</header> -->
 
 <div class="container">
 
@@ -475,9 +410,9 @@
     </div>
 
     <!--<button onclick="runSim()">Run Simulation</button>-->
-    <div class="button-row">
-      <button class="sim-button" style="background-color: #05d0f4; color: white;" onclick="runSim()">Run Simulation</button>
-      <button class="sim-button" style="background-color: #ff4d4d; color: white;" onclick="localStorage.clear();location.reload()">Reset Params</button>
+    <div style="display: flex; justify-content: center; width: 100%; gap: 20px;">
+      <button onclick="runSim()">Run Simulation</button>
+      <button style="background-color: #ff4d4d; color: white;" onclick="localStorage.clear();location.reload()">Reset Params</button>
     </div>
   </div>
 
