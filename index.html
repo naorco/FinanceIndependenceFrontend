@@ -603,6 +603,9 @@
 </footer>
 
 <script>
+  const SimURL = "https://financesim-proxy.onrender.com/FinanceFreedomSim";
+  const SimAnalyticsURL = "https://financesim-proxy.onrender.com/SimAnalytics";
+  const VisitorsAnalyticsURL = "https://financesim-proxy.onrender.com/VisitorsAnalytics";
 loadSimAnalytics();
 loadVisitorsAnalytics();
 let lastSimData = null;
@@ -634,7 +637,7 @@ async function runSim() {
 
     try {
         
-        const res = await fetch("https://financesim-proxy.onrender.com/FinanceFreedomSim", {
+        const res = await fetch(SimURL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -723,13 +726,14 @@ function exportExcel() {
 
 async function loadSimAnalytics() {
     try {
-        const res = await fetch('https://financesim-proxy.onrender.com/SimAnalytics', {
+        const res = await fetch(SimAnalyticsURL, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         });
 
         if (!res.ok) {
             console.error("Server returned error:", res.status);
+            document.getElementById("simRunCount").innerText = "-1";
             return;
         }
 
@@ -746,13 +750,14 @@ async function loadVisitorsAnalytics() {
     try {
         
         // load visit count as well
-        const res = await fetch('https://financesim-proxy.onrender.com/VisitorsAnalytics', {
+        const res = await fetch(VisitorsAnalyticsURL, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         });
 
         if (!res.ok) {
             console.error("Server returned error:", res.status);
+            document.getElementById("visitCount").innerText = "-1";
             return;
         }
 
