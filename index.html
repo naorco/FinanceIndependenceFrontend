@@ -17,9 +17,26 @@
   <meta name="description" content="Interactive financial independence calculator and simulator. Build projections, run scenarios, and plan your FIRE future.">
   <meta name="keywords" content="financial independence, FIRE calculator, retirement simulator, finance, savings, investing">
   <meta name="author" content="Naor Cohen">
+  <meta name="theme-color" content="#5A38F0" />
 
   <title>Financial Independence Simulator</title>
+  <link rel="icon" href="/favicon_io/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon_io/favicon-192x192.png" type="image/png" sizes="192x192" />
+  <link rel="icon" href="/favicon_io/favicon-512x512.png" type="image/png" sizes="512x512" />
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Financial Independence Simulator",
+  "url": "https://naorco.github.io/FinanceIndependenceFrontend/",
+  "description": "Interactive financial independence calculator and FIRE projection simulator.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All"
+}
+</script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <style>
@@ -134,7 +151,7 @@
 
     .backend-down h3 {
         margin-top: 0;
-        color: orangered;
+        color: orange;
     }
     /* Support button designs with logos */
     .support-btn {
@@ -500,7 +517,7 @@
     </div>
   </div>
   <!-- Hidden card -->
-      <div id="backend-down-card" class="backend-down hidden" >
+      <div id="backend-down-card" class="backend-down" >
           <h3>⏳ Server Warming Up</h3>
           <p>
               My backend services are hosted on free-tier infrastructure.  
