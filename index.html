@@ -348,9 +348,22 @@ async function runSim() {
     lastSimData = data;
 
     document.getElementById("results-card").style.display = "block";
-    const layout = {
+    const layout_value = {
     autosize: true,
     margin: { l: 40, r: 20, t: 40, b: 40 },
+    xaxis: {title: "Months"}, yaxis: {title: "Value"},
+    legend: {
+        orientation: "h",
+        yanchor: "bottom",
+        y: -0.3,
+        xanchor: "center",
+        x: 0.5
+    }
+};
+const layout_returns = {
+    autosize: true,
+    margin: { l: 40, r: 20, t: 40, b: 40 },
+    xaxis: {title: "Months"}, yaxis: {title: "Returns (%)"},
     legend: {
         orientation: "h",
         yanchor: "bottom",
@@ -363,18 +376,17 @@ async function runSim() {
     Plotly.newPlot("plot1", [
       { x: data.months, y: data.lAvgInitialFortune, name: "Initial Fortune Coupled to Inflation" },
       { x: data.months, y: data.lAvgPortfolio, name: "Average Portfolio Value" }],
-      layout,{xaxis: {title: "Months"}, yaxis: {title: "Value"}})
+      layout_value)
       //{ title: "Portfolio Progression" });
     Plotly.newPlot("plot2", [{ x: data.months, y: data.lAvgCashBalance, name: "Average Cash Balance" }],
-    layout,{xaxis: {title: "Months"}, yaxis: {title: "Value"}})//, { title: "Cash Balance" });
+    layout_value)//, { title: "Cash Balance" });
     Plotly.newPlot("plot3", [
         { x: data.months, y: data.lAvgSolidReturn, name: "Solid Returns" },
         { x: data.months, y: data.lAvgStocksReturn, name: "Risky Returns" }
-    ],layout,{xaxis: {title: "Months"}, yaxis: {title: "Returns (%)"}})//, { title: "Monthly Returns (%)" });
+    ],layout_returns)//, { title: "Monthly Returns (%)" });
     Plotly.newPlot("plot4", [
       { x: data.months, y: data.lAvgWithdrawal, name: "Withdrawal Before Tax" },
-      {x: data.months, y: data.lAvgRecieved, name: "Net Withdrawal Actually recieved After Tax" }],layout,
-      {xaxis: {title: "Months"}, yaxis: {title: "Value"}})
+      {x: data.months, y: data.lAvgRecieved, name: "Net Withdrawal Actually recieved After Tax" }],layout_value)
       //,{ title: "Withdrawal Progression" });
 
       // refresh analytics after sim run
