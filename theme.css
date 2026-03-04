@@ -39,7 +39,7 @@
   :root {
     --hdr-gap: 5px;
     --hdr-padding: 10px;
-    --brand-font-size: 1.4rem;
+    --brand-font-size: 1.2rem;
     --tagline-font-size: 0.8rem;
   }
   #plot1, #plot2, #plot3, #plot4 {
@@ -116,7 +116,7 @@ label {
 .category-title {
   margin: 10px 0 5px 0;
   font-weight: bold;
-  color: var(--bg-alt);
+  color: var(--brand-color);
   padding-bottom: 3px;
   border-bottom: 2px solid #d0d7ff;
 }
